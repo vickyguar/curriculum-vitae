@@ -1,0 +1,219 @@
+% plantilla/ créditos/ inspiración: http://stefano.italians.nl/archives/26
+% DOCUMENT DEFINITION
+\documentclass[a4paper,11pt]{article}
+
+% PAQUETES
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{parskip}    
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}      
+\usepackage{fontawesome5}
+\usepackage[unicode, draft=false]{hyperref}
+
+% CONFIGURACIÓN DE COLORES
+\definecolor{primaryColor}{RGB}{0, 32, 96} % Azul Marino Profesional
+\hypersetup{colorlinks, breaklinks, urlcolor=primaryColor, linkcolor=primaryColor}
+
+% ESTILO DE SECCIONES
+\titleformat{\section}{\large\bfseries\scshape\color{primaryColor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+% COMANDOS PERSONALIZADOS
+\newcommand{\fecha}[1]{\hfill \small \textit{\color{black!70} #1}}
+
+% Entorno Experiencia
+\newenvironment{experiencia}[3]{
+    \noindent {\large\textbf{#1}} \\
+    \noindent {\normalsize{\textit{#2}} \fecha{#3}}
+    \small
+    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=2pt, topsep=2pt]
+}{
+    \end{itemize}
+}
+
+% Entorno Formación
+\newenvironment{formacion}[4]{
+    \noindent {\large\textbf{#1}} \fecha{#4} \\
+    \noindent {#2}, {#3}
+    \small
+    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=2pt, topsep=2pt]
+}{
+    \end{itemize}
+}
+
+% Tecnologías
+\newcommand{\tecnologias}[1]{
+    \vspace{-0.5em}
+    \noindent \footnotesize \textbf{\color{primaryColor}Herramientas:} #1 \normalsize \par % \vspace{0.8em}
+}
+
+\newcommand{\tecnologiasItems}[1]{
+    \noindent \footnotesize \textbf{\color{primaryColor}Tecnologías y herramientas:}
+    \begin{itemize}[nosep, leftmargin=2em, label=\tiny\faCode]
+        \scriptsize #1
+    \end{itemize}
+    \vspace{0.8em}
+}
+
+% Congresos
+\newenvironment{congresos}{
+    \newcommand{\evento}[2]{
+        \noindent \textbf{##1.} \textit{##2} \par
+    }
+}{
+}
+
+% Eventos (Nombre, Lugar/Detalle, Fecha)
+\newcommand{\evento}[3]{
+    \noindent \textbf{#1}. \textit{#2}. {\small \textit{\color{black!70} {#3}}}.
+    \vspace{0.6em} \par
+}
+
+% Posters/Orales (Título, Congreso, Autores, Fecha)
+\newcommand{\presentacion}[4]{
+    \noindent \textbf{#1} \par
+    \noindent \textit{#2}. \footnotesize #3 \fecha{#4}
+    \vspace{0.6em} \par
+}
+
+% Cursos
+\newcommand{\curso}[4]{
+    \noindent
+    \begin{tabularx}{\linewidth}{@{}X r@{}}
+        \textbf{#1} & {\fecha{#4}} \\
+        \multicolumn{2}{@{}l}{\textit{#2} (#3 hs).}
+    \end{tabularx}
+    \vspace{0.6em} \par
+}
+
+% DOCUMENTO
+\begin{document}
+\pagestyle{empty} 
+
+% HEADER
+\begin{center}
+    {\Huge \textbf{\color{primaryColor}Victoria Guarnieri}} \\ [5pt]
+    {\Large \textbf{Ingeniera Biomédica}} \\ [8pt]
+    \small
+    \href{mailto:vickyguarnieri1@gmail.com}{\faEnvelope \ vickyguarnieri1@gmail.com} \ $|$ \ 
+    \href{tel:+5491130410475}{\raisebox{-0.05\height}\faPhone \ +54 9 11 3041-0475} \ $|$ \ 
+    \faMapMarker* \ Adrogué, Buenos Aires \\ [3pt]
+    \href{https://github.com/vickyguar}{\faGithub \ vickyguar} \ $|$ \ 
+    \href{https://linkedin.com/in/victoria-guarnieri-}{\faLinkedin \ victoria-guarnieri-} \ $|$ \ 
+    \faIdCard \ DNI 43.660.111
+\end{center}
+
+% FORMACIÓN ACADÉMICA
+\section{Formación Académica}
+\begin{formacion}{Ingeniería Biomédica}{Facultad de Ingeniería y Ciencias Exactas y Naturales}{Universidad Favaloro (FICEN-UF)}{Mar 2020 -- Dic 2025}
+    \item \textbf{Promedio:} 8,35/10.
+    \item \textbf{Proyecto Final:} Gestión de Datos en Investigación Oncológica: Desarrollo de Software Integral para Ensayos \textit{In Vivo}.
+\end{formacion}
+\tecnologias{C/C++, C\#, MATLAB}
+
+% EXPERIENCIA LABORAL
+\section{Experiencia Laboral}
+\begin{experiencia}{Programa de Inteligencia Artificial en Salud, Hospital Italiano de Buenos Aires}{Trainee en IA}{Sep 2024 -- Presente}
+    \item Construcción y evaluación de un modelo de aprendizaje profundo para clasificación, bajo supervisión.
+    \item Diseño y ejecución de un estudio de grado de acuerdo interobservador para definir etiquetas de entrenamiento.
+    \item Documentación técnica y seguimiento de experimentos.
+    \item Evaluación de productos externos.
+\end{experiencia}
+\tecnologiasItems{
+    \item \textbf{Python 3.13:} PyTorch, Pandas, Numpy, Scikit-learn; \textbf{R 4.3:} tidyverse, ggplot2, plotly, irrCAC
+    \item \textbf{Cloud:} AWS SageMaker y AWS S3
+    \item \textbf{Control de versiones:} Git, Github y Bitbucket
+    \item \textbf{Seguimiento de experimentos:} Weights \& Biases (wandb)
+}
+
+\vspace{1em}
+
+\begin{experiencia}{FICEN-UF -- Departamento de Matemática}{Ayudante Alumno}{Ago 2021 -- Presente}
+    \item Ayudante en las materias \textbf{Cálculo I} (Cálculo en una variable), \textbf{Cálculo II} (Cálculo en varias variables) y \textbf{Cálculo III} (Cálculo en variable compleja).
+    \item Dictado de clases prácticas y de revisión teórica.
+    \item Colaboración en la escritura, evaluación y corrección de exámenes parciales bajo supervisión.
+\end{experiencia}
+
+\vspace{1em}
+
+\begin{experiencia}{FICEN-UF -- Departamento de Informática}{Ayudante Alumno}{Mar 2025 -- Jul 2025}
+    \item Ayudante en la materia \textbf{Base de Datos}.
+    \item Dictado de clases prácticas.
+    \item Escritura, evaluación y corrección de trabajos prácticos.
+    \item Colaboración en la escritura, evaluación y corrección de exámenes parciales bajo supervisión.
+\end{experiencia}
+\tecnologias{MySQL 8.0}
+
+\vspace{1em}
+
+\begin{experiencia}{Hospital Universitario Fundación Favaloro}{Rotante en Ingeniería Biomédica}{May 2024 -- Sep 2024}
+    \item Práctica profesional supervisada.
+    \item Tareas de servicio técnico preventivo y correctivo. Reparación a nivel placa y a nivel componentes; control de funcionamiento con testers biomédicos; control de seguridad eléctrica con analizador; compra de componentes a través del fondo fijo del sector.
+    \item Actualización de protocolos, conforme a la norma IRAM 15 y análisis de datos históricos de mantenimiento.
+\end{experiencia}
+\tecnologias{Microsoft Excel, Neovero}
+
+% CURSOS Y MINICURSOS
+\section{Cursos}
+\curso{Deep Learning: Redes neuronales desde cero}{Centro de e-Learning UTN FRBA. Con evaluación.}{37}{26 de julio de 2023}
+
+\curso{Introducción al aprendizaje automático no supervisado}{FICEN-UF}{16}{12 de mayo de 2023}
+
+\curso{Machine Learning con Python}{Centro de e-Learning UTN FRBA. Con evaluación.}{60}{5 de mayo de 2023}
+
+\curso{Introducción a Python orientado a algoritmos y técnicas de programación competitiva}{IEEE UF, IEEE WIE y LambdaClass}{20}{8 de noviembre de 2020}
+% \curso{Modelos Aditivos Generalizados (GAM)}{Reunión del Grupo Argentino de Bioestadística}{4}{Octubre de 2025}
+% \curso{Por qué (¿no?) me gustaría/quisiera/debería ``convertirme'' a la Estadística bayesiana y nunca me atreví a preguntármelo… }{Reunión del Grupo Argentino de Bioestadística}{3}{Octubre de 2025}
+% \curso{Ideas estocásticas fundamentales que conectan el análisis exploratorio y la inferencia informal}{Reunión del Grupo Argentino de Bioestadística}{3}{Octubre de 2025}
+% ASISTENCIA A CONGRESOS
+\section{Asistencia a Congresos y Jornadas}
+\evento{XX Jornadas de Informática en Salud JIS Summit del Hospital Italiano de Buenos Aires}{Centro Metropolitano de Diseño, Ciudad Autónoma de Buenos Aires, Argentina. Evento híbrido}{7 al 9 de noviembre de 2025}
+\evento{Jornada de actualización sobre Patología Vulvar de la Sociedad Iberoamericana de Vulva y Vagina (SIAVV)}{Yacht Club Puerto Madero, Ciudad Autónoma de Buenos Aires, Argentina}{24 de octubre de 2025}
+\evento{XXV Congreso Argentino de Bioingeniería, las XIV Jornadas de Ingeniería Clínica y la III Conferencia Latinoamericana de Ingeniería Clínica, SABI-2025}{Hotel 13 de Julio, Mar del Plata, Argentina}{14 al 17 de octubre de 2025}
+\evento{XXIX Reunión Científica del Grupo Argentino de Bioestadística, GAB 2025}{Universidad Nacional del Nordeste, Corrientes, Argentina}{1 al 3 de octubre de 2025}
+\evento{II Jornadas de enseñanza de la Estadística}{Universidad Nacional del Nordeste, Corrientes, Argentina}{30 de septiembre de 2025}
+\evento{XVIII Jornadas de Informática en Salud JIS Summit del Hospital Italiano de Buenos Aires}{Centro Metropolitano de Diseño, Ciudad Autónoma de Buenos Aires, Argentina. Evento híbrido}{1 al 3 de noviembre de 2023}
+\evento{XXIV Congreso Argentino de Bioingeniería y las XIII Jornadas de Ingeniería Clínica, SABI 2023}{Universidad Nacional de Arturo Jauretche, Florencio Varela, y Centro Cultural Kirchner, Ciudad Autónoma de Buenos Aires, Argentina}{3 al 6 de octubre de 2023}
+\evento{XXIII Congreso Argentino de Bioingeniería y las XII Jornadas de Ingeniería Clínica, SABI 2022}{Universidad Nacional de San Juan, San Juan, Argentina}{13 al 16 de septiembre de 2022}
+
+\section{Presentación de Posters}
+\evento{\normalsize{Determinación de grado de acuerdo para variables categóricas: a propósito de un caso}}{GAB 2025}{Rusconi Lagarrigue A.B., Sguiglia S., \textbf{Guarnieri V.}, et al}
+\evento{\normalsize{Determinación del grado de acuerdo interobservador en segmentación de imágenes médicas: a propósito de un caso}}{GAB 2025}{Sguiglia S., Rusconi Lagarrigue A.B., \textbf{Guarnieri V.}, et al}
+
+\section{Presentaciones Orales}
+\evento{\normalsize{Estudio de acuerdo interobservador en la valoración de imágenes de lesiones por presión}}{JIS SUMMIT 2025}{Rusconi Lagarrigue A.B., Sguiglia S., \textbf{Guarnieri V}}
+\evento{\normalsize{Inteligencia artificial en la práctica médica}}{Jornada SIAVV}{Caridi J., \textbf{Guarnieri V}}
+
+% BECAS Y RECONOCIMIENTOS
+% \section{Becas y Reconocimientos}
+% \begin{itemize}[leftmargin=1.2em, label=\small\faAward, nosep]
+%     \item \normalsize\textbf{Beca de Investigación para Estudiantes (BIE)}, Universidad Favaloro \fecha{Feb 2022 -- Feb 2025}
+%     \item \normalsize\textbf{Segunda escolta de bandera nacional}, FICEN-UF \fecha{Periodo lectivo 2024}
+% \end{itemize}
+
+% IDIOMAS Y SKILLS
+\section{Idioma}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Inglés} (Competencia básica, lectura técnica y escritura científica). \\
+\end{tabularx}
+
+
+% VOLUNTARIADO 
+\section{Voluntariado}
+\begin{experiencia}{Capítulo estudiantil de la Sociedad Argentina de Bioingeniería}{Representante de Estudiantes}{Mar 2024 -- Oct 2025}
+    \item Gestión de proyectos y eventos.
+    \item Comunicación y difusión de eventos tecnológicos y científicos.
+    \item Fomento de la vinculación académica y profesional entre estudiantes de Bioingeniería a nivel nacional.
+\end{experiencia}
+
+\vfill
+\begin{center}
+    \footnotesize \color{black!50} Última actualización: \today \ $|$ Adrogué, Buenos Aires
+\end{center}
+
+\end{document}
