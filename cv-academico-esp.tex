@@ -1,101 +1,6 @@
-% plantilla/ créditos/ inspiración: http://stefano.italians.nl/archives/26
-% DOCUMENT DEFINITION
 \documentclass[a4paper,10pt]{article}
+\usepackage{config-esp} % Carga toda tu configuración profesional
 
-% PAQUETES
-\usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{url}
-\usepackage{parskip}    
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9, top=1.5cm, bottom=1.5cm]{geometry}
-\usepackage{tabularx}
-\usepackage{enumitem}
-\usepackage{titlesec}      
-\usepackage{fontawesome5}
-\usepackage[unicode, draft=false]{hyperref}
-
-% CONFIGURACIÓN DE COLORES
-\definecolor{primaryColor}{RGB}{0, 32, 96} % Azul Marino Profesional
-\hypersetup{colorlinks, breaklinks, urlcolor=primaryColor, linkcolor=primaryColor}
-
-% ESTILO DE SECCIONES
-\titleformat{\section}{\Large\scshape\raggedright\color{primaryColor}}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{6pt}
-
-% COMANDOS PERSONALIZADOS
-\newcommand{\fecha}[1]{\hfill \small \textit{\color{black!70} #1}}
-
-% Entorno Experiencia
-\newenvironment{experiencia}[3]{
-    \noindent {\large\textbf{#1}} \\
-    \noindent {\normalsize{\textit{#2}} \fecha{#3}}
-    \small
-    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=2pt, topsep=2pt]
-}{
-    \end{itemize}
-}
-
-% Entorno Formación
-\newenvironment{formacion}[4]{
-    \noindent {\large\textbf{#1}} \fecha{#4} \\
-    \noindent {#2}, {#3}
-    \small
-    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=2pt, topsep=2pt]
-}{
-    \end{itemize}
-}
-
-% Tecnologías
-\newcommand{\tecnologias}[1]{
-    \vspace{-0.5em}
-    \noindent \footnotesize \textbf{\color{primaryColor}Herramientas principales:} #1 \normalsize \par % \vspace{0.8em}
-}
-\newcommand{\habilidades}[1]{
-    \vspace{-0.5em}
-    \noindent \footnotesize \textbf{\color{primaryColor}Habilidades destacadas:} #1 \normalsize \par % \vspace{0.8em}
-}
-
-\newcommand{\tecnologiasItems}[1]{
-    \noindent \footnotesize \textbf{\color{primaryColor}Tecnologías y herramientas:}
-    \begin{itemize}[nosep, leftmargin=2em, label=\tiny\faCode]
-        \scriptsize #1
-    \end{itemize}
-    \vspace{0.8em}
-}
-
-% Congresos
-\newenvironment{congresos}{
-    \newcommand{\evento}[2]{
-        \noindent \textbf{##1.} \textit{##2} \par
-    }
-}{
-}
-
-% Eventos (Nombre, Lugar/Detalle, Fecha)
-\newcommand{\evento}[3]{
-    \noindent \textbf{#1}. \textit{#2}. {\small \textit{\color{black!70} {#3}}}.
-    \vspace{0.6em} \par
-}
-
-% Posters/Orales (Título, Congreso, Autores, Fecha)
-\newcommand{\presentacion}[4]{
-    \noindent \textbf{#1} \par
-    \noindent \textit{#2}. \footnotesize #3 \fecha{#4}
-    \vspace{0.6em} \par
-}
-
-% Cursos
-\newcommand{\curso}[4]{
-    \noindent
-    \begin{tabularx}{\linewidth}{@{}X r@{}}
-        \textbf{#1} & {\fecha{#4}} \\
-        \multicolumn{2}{@{}l}{\textit{#2} (#3 hs).}
-    \end{tabularx}
-    \vspace{0.6em} \par
-}
-
-% DOCUMENTO
 \begin{document}
 \pagestyle{empty} 
 
@@ -105,7 +10,7 @@
     {\Large {Ingeniera Biomédica}} \\ [8pt]
     \small
     \href{mailto:vickyguarnieri1@gmail.com}{\faEnvelope \ vickyguarnieri1@gmail.com} \ $|$ \ 
-    \href{tel:+5491130410475}{\raisebox{-0.05\height}\faPhone \ +54 9 11 3041-0475} \ $|$ \ 
+    \href{tel:+5491130410475}{\faPhone \ +54 9 11 3041-0475} \ $|$ \ 
     \faMapMarker* \ Buenos Aires, Argentina \\ [3pt]
     \href{https://github.com/vickyguar}{\faGithub \ vickyguar} \ $|$ \ 
     \href{https://linkedin.com/in/victoria-guarnieri-}{\faLinkedin \ victoria-guarnieri-} \ $|$ \ 
@@ -136,8 +41,6 @@
     \item Colaboración en la escritura, evaluación y corrección de exámenes parciales bajo supervisión.
 \end{experiencia}
 
-\vspace{1em}
-
 \begin{experiencia}{FICEN-UF -- Departamento de Informática}{Ayudante Alumno}{Mar 2025 -- Jul 2025}
     \item Ayudante en la materia \textbf{Base de Datos}.
     \item Dictado de clases prácticas.
@@ -146,6 +49,7 @@
 \end{experiencia}
 \tecnologias{MySQL 8.0.}
 \habilidades{Modelado y normalización de bases de datos, programación en SQL.}
+
 
 \vspace{1em}
 
