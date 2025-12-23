@@ -1,0 +1,170 @@
+% DOCUMENT DEFINITION
+\documentclass[a4paper,11pt]{article}
+
+% PAQUETES
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{parskip}    
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=1cm, bottom=1cm, left=1.2cm, right=1.2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}      
+\usepackage{fontawesome5}
+\usepackage[unicode, draft=false]{hyperref}
+
+% CONFIGURACIÓN DE COLORES
+\definecolor{primaryColor}{RGB}{0, 32, 96} 
+\hypersetup{colorlinks, breaklinks, urlcolor=primaryColor, linkcolor=primaryColor}
+
+% ESTILO DE SECCIONES (Compacto)
+\titleformat{\section}{\large\scshape\raggedright\color{primaryColor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5pt}{3pt}
+
+% COMANDOS PERSONALIZADOS
+\newcommand{\fecha}[1]{\hfill \small \textit{\color{black!70} #1}}
+
+% Entorno Experiencia (Optimizado)
+\newenvironment{experiencia}[3]{
+    \noindent {\textbf{#1}} \fecha{#3} \\
+    \noindent {\small\textit{#2}}
+    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=1pt, topsep=1pt]
+}{
+    \end{itemize}
+}
+
+\newenvironment{experiencia_corta}[4]{
+    \noindent \textbf{#1} \fecha{#3} \\ 
+    \noindent {\small\textit{#2}} \\[2pt]
+    \noindent {\small #4}
+}{}
+
+% Entorno Formación
+\newenvironment{formacion}[4]{
+    \noindent {\textbf{#1}} \fecha{#4} \\
+    \noindent \small {#2}, {#3}
+    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=1pt, topsep=1pt]
+}{
+    \end{itemize}
+}
+
+\newcommand{\tecnologias}[1]{
+    \noindent \footnotesize \textbf{\color{primaryColor}Herramientas:} #1 \par
+}
+
+\newcommand{\tecnologiasItems}[1]{
+    \noindent \footnotesize \textbf{\color{primaryColor}Tecnologías y herramientas:}
+    \begin{itemize}[nosep, leftmargin=2em, label=\tiny\faCode]
+        \scriptsize #1
+    \end{itemize}
+    \vspace{0.5em}
+}
+
+\newcommand{\evento}[3]{
+    \noindent \small \textbf{#1}. \textit{#2}. {\scriptsize \textit{\color{black!70} {#3}}} \par
+}
+
+\newcommand{\curso}[4]{
+    \noindent \small \textbf{#1} \hfill {\scriptsize \fecha{#4}} \\
+    \textit{#2} (#3 hs). \par
+}
+
+% DOCUMENTO
+\begin{document}
+\pagestyle{empty} 
+
+% HEADER REDISEÑADO (Nombre a la izquierda, contacto a la derecha)
+\noindent
+\begin{minipage}[t]{0.60\textwidth}
+    {\Huge \scshape{\color{primaryColor}Victoria Guarnieri}} \\[5pt]
+    {\Large Ingeniera Biomédica}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.38\textwidth}
+    \small
+    \href{mailto:vickyguarnieri1@gmail.com}{\faEnvelope\ vickyguarnieri1@gmail.com} \\[2pt]
+    \href{tel:+5491130410475}{\faPhone\ +54 9 11 3041-0475} \\[2pt]
+    \href{https://github.com/vickyguar}{\faGithub\ vickyguar} \ $|$\
+    \href{https://linkedin.com/in/victoria-guarnieri-}{\faLinkedin\ victoria-guarnieri-} \\[2pt]
+    \faMapMarker*\ Buenos Aires, Argentina \\[4pt]
+    \faIdCard\ DNI 43.660.111
+\end{minipage}
+
+\vspace{1pt}
+
+% FORMACIÓN ACADÉMICA
+\section{Formación Académica}
+\begin{formacion}{Ingeniería Biomédica}{Facultad de Ingeniería y Ciencias Exactas y Naturales}{Universidad Favaloro}{Mar 2020 -- Dic 2025}
+    \item \textbf{Promedio:} 8,35/10. 
+    \item \textbf{Proyecto Final:} Gestión de Datos en Investigación Oncológica: Desarrollo de Software Integral para Ensayos \textit{In Vivo}.
+\end{formacion}
+\tecnologias{C/C++, C\#, MATLAB.}
+
+% EXPERIENCIA LABORAL
+\section{Experiencia Laboral}
+\begin{experiencia}{Programa de Inteligencia Artificial en Salud, Hospital Italiano de Buenos Aires}{Trainee en IA}{Sep 2024 -- Presente}
+    \item Construcción y evaluación de un modelo de aprendizaje profundo para clasificación, bajo supervisión.
+    \item Diseño y ejecución de un estudio de grado de acuerdo interobservador para definir etiquetas de entrenamiento.
+    \item Documentación técnica y seguimiento de experimentos.
+    \item Evaluación de productos externos.
+\end{experiencia}
+\tecnologiasItems{
+    \item \textbf{Python 3.13:} PyTorch, Pandas, Numpy, Scikit-learn. \textbf{R 4.3:} tidyverse, ggplot2, plotly, irrCAC.
+    \item \textbf{Cloud:} AWS SageMaker y AWS S3.
+    \item \textbf{Control de versiones:} Git, Github y Bitbucket.
+    \item \textbf{Seguimiento de experimentos:} Weights \& Biases (wandb).
+}
+
+\begin{experiencia_corta}{FICEN-UF -- Departamento de Matemática}{Ayudante Alumno}{Ago 2021 -- Presente}{
+    Ayudante en las materias \textbf{Cálculo I}, \textbf{Cálculo II} y \textbf{Cálculo III}.
+}
+\end{experiencia_corta}
+
+\begin{experiencia_corta}{FICEN-UF -- Departamento de Informática}{Ayudante Alumno}{Mar 2025 -- Jul 2025}{
+    Ayudante en la materia \textbf{Base de Datos}.
+}
+\end{experiencia_corta}
+
+\tecnologias{MySQL 8.0.}
+
+\begin{experiencia}{Hospital Universitario Fundación Favaloro}{Rotante en Ingeniería Biomédica}{May 2024 -- Sep 2024}
+    \item Tareas de servicio técnico preventivo y correctivo. Reparación a nivel placa y a nivel componentes; control de funcionamiento con testers biomédicos; control de seguridad eléctrica con analizador; compra de componentes a través del fondo fijo del sector.
+    \item Actualización de protocolos, conforme a la norma IRAM 15 y análisis de datos históricos de mantenimiento.
+\end{experiencia}
+\tecnologias{Microsoft Excel, Neovero.}
+
+% CURSOS Y MINICURSOS
+\section{Cursos}
+\curso{Deep Learning: Redes neuronales desde cero}{Centro de e-Learning UTN FRBA. Con evaluación.}{37}{Jul 2023}
+
+\curso{Introducción al aprendizaje automático no supervisado}{FICEN-UF}{16}{May 2023}
+
+\curso{Machine Learning con Python}{Centro de e-Learning UTN FRBA. Con evaluación.}{60}{May 2023}
+
+\curso{Introducción a Python orientado a algoritmos y técnicas de programación competitiva}{IEEE UF, IEEE WIE y LambdaClass}{20}{Nov 2020}
+% \curso{Modelos Aditivos Generalizados (GAM)}{Reunión del Grupo Argentino de Bioestadística}{4}{Octubre de 2025}
+% \curso{Por qué (¿no?) me gustaría/quisiera/debería ``convertirme'' a la Estadística bayesiana y nunca me atreví a preguntármelo… }{Reunión del Grupo Argentino de Bioestadística}{3}{Octubre de 2025}
+% \curso{Ideas estocásticas fundamentales que conectan el análisis exploratorio y la inferencia informal}{Reunión del Grupo Argentino de Bioestadística}{3}{Octubre de 2025}
+
+% BECAS Y RECONOCIMIENTOS
+% \section{Becas y Reconocimientos}
+% \begin{itemize}[leftmargin=1.2em, label=\small\faAward, nosep]
+%     \item \normalsize\textbf{Beca de Investigación para Estudiantes (BIE)}, UF \fecha{Feb 2022 -- Feb 2025}
+%     \item \normalsize\textbf{Segunda escolta de bandera nacional}, FICEN-UF \fecha{Periodo lectivo 2024}
+% \end{itemize}
+
+% IDIOMAS Y SKILLS
+\section{Idioma}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Inglés} (Competencia básica, lectura técnica y escritura científica). \\
+\end{tabularx}
+
+\vspace{-0.5em}
+
+\vspace*{\fill}
+\begin{flushright}
+    \footnotesize \color{black!50} Última actualización: \today
+\end{flushright}
+
+\end{document}
