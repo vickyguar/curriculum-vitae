@@ -1,6 +1,6 @@
 % plantilla/ créditos/ inspiración: http://stefano.italians.nl/archives/26
 % DOCUMENT DEFINITION
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 % PAQUETES
 \usepackage[spanish]{babel}
@@ -49,7 +49,11 @@
 % Tecnologías
 \newcommand{\tecnologias}[1]{
     \vspace{-0.5em}
-    \noindent \footnotesize \textbf{\color{primaryColor}Herramientas:} #1 \normalsize \par % \vspace{0.8em}
+    \noindent \footnotesize \textbf{\color{primaryColor}Herramientas principales:} #1 \normalsize \par % \vspace{0.8em}
+}
+\newcommand{\habilidades}[1]{
+    \vspace{-0.5em}
+    \noindent \footnotesize \textbf{\color{primaryColor}Habilidades destacadas:} #1 \normalsize \par % \vspace{0.8em}
 }
 
 \newcommand{\tecnologiasItems}[1]{
@@ -108,14 +112,6 @@
     \faIdCard \ DNI 43.660.111
 \end{center}
 
-% FORMACIÓN ACADÉMICA
-\section{Formación Académica}
-\begin{formacion}{Ingeniería Biomédica}{Facultad de Ingeniería y Ciencias Exactas y Naturales}{Universidad Favaloro (FICEN-UF)}{Mar 2020 -- Dic 2025}
-    \item \textbf{Promedio:} 8,35/10.
-    \item \textbf{Proyecto Final:} Gestión de Datos en Investigación Oncológica: Desarrollo de Software Integral para Ensayos \textit{In Vivo}.
-\end{formacion}
-\tecnologias{C/C++, C\#, MATLAB.}
-
 % EXPERIENCIA LABORAL
 \section{Experiencia Laboral}
 \begin{experiencia}{Programa de Inteligencia Artificial en Salud, Hospital Italiano de Buenos Aires}{Trainee en IA}{Sep 2024 -- Presente}
@@ -125,11 +121,12 @@
     \item Evaluación de productos externos.
 \end{experiencia}
 \tecnologiasItems{
-    \item \textbf{Python 3.13:} PyTorch, Pandas, Numpy, Scikit-learn. \textbf{R 4.3:} tidyverse, ggplot2, plotly, irrCAC.
+    \item \textbf{Python 3.13:} PyTorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn. \textbf{R 4.3:} tidyverse, ggplot2, plotly, irrCAC.
     \item \textbf{Cloud:} AWS SageMaker y AWS S3.
     \item \textbf{Control de versiones:} Git, Github y Bitbucket.
     \item \textbf{Seguimiento de experimentos:} Weights \& Biases (wandb).
 }
+\habilidades{Análisis y visualización de datos, aprendizaje automático, aprendizaje profundo, procesamiento de imágenes, estadística aplicada.}
 
 \vspace{1em}
 
@@ -148,6 +145,7 @@
     \item Colaboración en la escritura, evaluación y corrección de exámenes parciales bajo supervisión.
 \end{experiencia}
 \tecnologias{MySQL 8.0.}
+\habilidades{Modelado y normalización de bases de datos, programación en SQL.}
 
 \vspace{1em}
 
@@ -157,6 +155,17 @@
     \item Actualización de protocolos, conforme a la norma IRAM 15 y análisis de datos históricos de mantenimiento.
 \end{experiencia}
 \tecnologias{Microsoft Excel, Neovero.}
+\habilidades{Ingeniería Clínica.}
+
+% FORMACIÓN ACADÉMICA
+\section{Formación Académica}
+\begin{formacion}{Ingeniería Biomédica}{Facultad de Ingeniería y Ciencias Exactas y Naturales}{Universidad Favaloro (FICEN-UF)}{Mar 2020 -- Dic 2025}
+    \item \textbf{Promedio:} 8,35/10.
+    \item \textbf{Proyecto Final:} Gestión de Datos en Investigación Oncológica: Desarrollo de Software Integral para Ensayos \textit{In Vivo}.
+\end{formacion}
+\tecnologias{C/C++, C\#, MATLAB, SQL.}
+\habilidades{Trabajo en equipo, resolución de problemas, disciplina, perseverancia.}
+
 
 % CURSOS Y MINICURSOS
 \section{Cursos}
@@ -190,11 +199,11 @@
 \evento{\normalsize{Inteligencia artificial en la práctica médica}}{Jornada SIAVV}{Caridi J., \textbf{Guarnieri V}}
 
 % BECAS Y RECONOCIMIENTOS
-% \section{Becas y Reconocimientos}
-% \begin{itemize}[leftmargin=1.2em, label=\small\faAward, nosep]
-%     \item \normalsize\textbf{Beca de Investigación para Estudiantes (BIE)}, UF \fecha{Feb 2022 -- Feb 2025}
-%     \item \normalsize\textbf{Segunda escolta de bandera nacional}, FICEN-UF \fecha{Periodo lectivo 2024}
-% \end{itemize}
+\section{Becas y Reconocimientos}
+\begin{itemize}[leftmargin=1.2em, label=\small\faAward, nosep]
+    \item \normalsize\textbf{Beca de Investigación para Estudiantes (BIE)}, UF \fecha{Feb 2022 -- Feb 2025}
+    \item \normalsize\textbf{Segunda escolta de bandera nacional}, FICEN-UF \fecha{Periodo lectivo 2024}
+\end{itemize}
 
 % IDIOMAS Y SKILLS
 \section{Idioma}
