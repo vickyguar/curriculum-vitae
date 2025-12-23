@@ -2,8 +2,8 @@
 
 ## Académicos
 - [Español](build/cv-academico-esp.pdf)
-- Inglés (TODO)
+- [English](build/cv-academic-eng.pdf)
 
 ## Profesionales (resumidos)
 - [Español](build/cv-profesional-esp.pdf)
-- Inglés (TODO)
+- [English](build/cv-profesional-eng.pdf)
