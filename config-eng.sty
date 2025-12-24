@@ -25,14 +25,21 @@
 \newcommand{\fecha}[1]{\hfill \small \textit{\color{black!70} #1}}
 
 % Entorno Experiencia
-\newenvironment{experiencia}[3]{
-    \noindent {\large\textbf{#1}} \\
-    \noindent {\normalsize{\textit{#2}} \fecha{#3}}
+\newenvironment{experiencia}[1]{
+    \vspace{0.2em}
+    \noindent {\normalsize\textbf{#1}} \par
+}{
+    \vspace{0.3em}
+}
+
+% Rol
+\newenvironment{rol}[2]{
+    \vspace{0.1ex}
+    \noindent {\small\textbf{\textit{#1}} \fecha{#2}} 
     \small
-    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=2pt, topsep=2pt]
+    \begin{itemize}[nosep, leftmargin=1.2em, label=-, itemsep=0pt, topsep=1pt]
 }{
     \end{itemize}
-    \vspace{0.4em}
 }
 
 % Entorno Experiencia corta
