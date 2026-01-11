@@ -1,0 +1,119 @@
+\documentclass{article} % Fuente reducida a 9pt
+\usepackage{config/config-eng} 
+
+% Ajuste fino de márgenes de secciones para ganar espacio
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{1.2ex plus 0.2ex minus 0.2ex}{0.8ex plus 0.2ex}
+
+\begin{document}
+\pagestyle{empty}
+
+% HEADER
+% \noindent
+% \begin{minipage}[t]{0.50\textwidth}
+%     {\Huge \scshape{\color{primaryColor}Victoria Guarnieri}} \\[2pt]
+%     {\large Ingeniera Biomédica}
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.48\textwidth}
+%     \raggedleft
+%     \footnotesize
+%     \href{mailto:vickyguarnieri1@gmail.com}{vickyguarnieri1@gmail.com \faEnvelope} \\[1pt]
+%     \href{tel:+5491130410475}{+54 9 11 3041-0475 \faPhone} \\[1pt]
+%     \href{https://linkedin.com/in/victoria-guarnieri-}{victoria-guarnieri- \faLinkedin} \ $|$\
+%     \href{https://github.com/vickyguar}{vickyguar \faGithub} \\[1pt]
+%     Buenos Aires, Argentina \faMapMarker* \\[1pt]
+%     DNI 43.660.111 \faIdCard
+% \end{minipage}
+
+
+% HEADER
+\begin{center}
+    {\huge \scshape{\color{primaryColor}Victoria Guarnieri}} \\ [5pt]
+    {\large {Biomedical Engineer}} \\ [8pt]
+    \small
+    \href{mailto:vickyguarnieri1@gmail.com}{\faEnvelope \ vickyguarnieri1@gmail.com} \ $|$ \ 
+    \href{tel:+5491130410475}{\faPhone \ +54 9 11 3041-0475} \ $|$ \ 
+    \faMapMarker* \ Buenos Aires, Argentina \\ [3pt]
+    \href{https://github.com/vickyguar}{\faGithub \ vickyguar} \ $|$ \ 
+    \href{https://linkedin.com/in/victoria-guarnieri-}{\faLinkedin \ victoria-guarnieri-} \ $|$ \ 
+    \faIdCard \ DNI 43.660.111
+\end{center}
+
+% EDUCATION
+\section{Education}
+\begin{formacion}{Biomedical Engineering}{Facultad de Ingeniería y Ciencias Exactas y Naturales}{Universidad Favaloro (FICEN-UF)}{Mar 2020 -- Dec 2025}
+    \item \textbf{GPA:} 8.35/10.
+    \item \textbf{Final Project:} Data Management in Oncological Research: Development of Comprehensive Software for \textit{In Vivo} Trials.
+\end{formacion}
+\tecnologias{C/C++, C\#, MATLAB, SQL.}\\
+\habilidades{Teamwork, problem solving, discipline, perseverance.}
+
+% EXPERIENCIA LABORAL
+\section{Work Experience}
+\begin{experiencia}{Programa de Inteligencia Artificial en Salud, Hospital Italiano de Buenos Aires}
+    \begin{rol}{AI Trainee}{Sep 2024 -- Present}
+        \item Construction and evaluation of a deep learning model for classification.
+        \item Design and execution of an interobserver agreement study to define training labels.
+        % \item Technical documentation and experiment tracking.
+        % \item Evaluation of external products.
+    \end{rol}
+\end{experiencia}
+\tecnologias{\textbf{Python 3.13} (PyTorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn, Pyplot); \textbf{AWS services} (AWS SageMaker, S3); \textbf{version control} with Git, Github, Bitbucket; \textbf{experiment tracking} with Weights \& Biases (wandb); \textbf{R 4.3} (tidyverse, ggplot2, plotly, irrCAC).}\\
+\habilidades{Data analysis and visualization, machine learning, deep learning, image processing, applied statistics.}
+
+\vspace{6pt}
+\begin{experiencia}{FICEN-UF -- Department of Mathematics}
+    % \begin{rol_corto}{Head of Practical Assignments}{Mar 2026 -- Present}
+    %     {In the subject \textbf{Calculus III} (complex variable Calculus).}
+    % \end{rol_corto} \\
+    \begin{rol_corto}{Student Assistant}{Aug 2021 -- Present}
+        {Assistant in the subjects \textbf{Calculus I} (single variable Calculus), \textbf{Calculus II} (multivariable Calculus) and \textbf{Calculus III} (complex variable Calculus).}
+    \end{rol_corto}
+\end{experiencia}
+
+\vspace{6pt}
+\begin{experiencia}{FICEN-UF -- Department of Informatics}
+    \begin{rol_corto}{Student Assistant}{Mar 2025 -- Jul 2025}
+        {Assistant in the subject \textbf{Database}.}
+    \end{rol_corto}
+\end{experiencia}\\
+\tecnologias{MySQL 8.0.}
+
+\vspace{6pt}
+\begin{experiencia}{Hospital Universitario Fundación Favaloro}
+    \begin{rol}{Biomedical Engineering Intern}{May 2024 -- Sep 2024}
+        \item Supervised professional practice.
+        \item Preventive and corrective technical service tasks. % Reparación a nivel placa y a nivel componentes; control de funcionamiento con testers biomédicos; control de seguridad eléctrica con analizador; compra de componentes a través del fondo fijo del sector.
+        % \item Actualización de protocolos, conforme a la norma IRAM 15 y análisis de datos históricos de mantenimiento.
+    \end{rol}
+\end{experiencia}
+%\tecnologias{Microsoft Excel, Neovero.}
+%\habilidades{Ingeniería Clínica.}
+
+% CURSOS
+\section{Certifications}
+\begin{small} % Cursos un poco más compactos
+\curso{Deep Learning: Neural Networks from Scratch}{Centro de e-Learning UTN FRBA. Graded.}{37}{Jul 2023}
+\curso{Introduction to Unsupervised Machine Learning}{FICEN-UF}{16}{May 2023}
+\curso{Machine Learning with Python}{Centro de e-Learning UTN FRBA. Graded.}{60}{May 2023}
+\curso{Introduction to Python oriented to algorithms and competitive programming techniques}{IEEE UF, IEEE WIE y LambdaClass}{20}{Nov 2020}
+\end{small}
+
+% IDIOMAS
+\section{Language}
+\textbf{English:} technical reading and scientific writing. \\
+
+% BECAS Y RECONOCIMIENTOS
+\section{Scholarships and Recognitions}
+\begin{itemize}[leftmargin=1.2em, label=\small\faAward, nosep]
+    \item \normalsize\textbf{Undergraduate Research Fellowship (BIE)}, UF \fecha{Feb 2022 -- Feb 2025}
+    \item \normalsize\textbf{Second National Flag Escort (Honor Guard)} \small\textit{ - ranked 3rd highest GPA.}, FICEN-UF \fecha{Academic year 2024}
+\end{itemize}
+
+\vfill
+\begin{center}
+    \footnotesize \color{black!50} Last updated: \today \
+\end{center}
+
+\end{document}

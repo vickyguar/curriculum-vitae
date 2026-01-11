@@ -1,5 +1,5 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage{config-esp} % Carga toda tu configuración profesional
+\usepackage{config/config-esp} % Carga toda tu configuración profesional
 
 \begin{document}
 \pagestyle{empty} 
@@ -23,29 +23,30 @@
     \item \textbf{Promedio:} 8,35/10.
     \item \textbf{Proyecto Final:} Gestión de Datos en Investigación Oncológica: Desarrollo de Software Integral para Ensayos \textit{In Vivo}.
 \end{formacion}
-\tecnologias{C/C++, C\#, MATLAB, SQL.}
-\habilidades{Trabajo en equipo, resolución de problemas, disciplina, perseverancia.}
+\tecnologias{Python, C/C++, C\#, MATLAB, Microsoft SQL Server.}\\
+\habilidades{Trabajo en equipo, investigación, resolución de problemas, disciplina, perseverancia.}
 
 % EXPERIENCIA LABORAL
 \section{Experiencia Laboral}
 \begin{experiencia}{Programa de Inteligencia Artificial en Salud, Hospital Italiano de Buenos Aires}
     \begin{rol}{Trainee en IA}{Sep 2024 -- Presente}
-        \item Construcción y evaluación de un modelo de aprendizaje profundo para clasificación, bajo supervisión.
-        \item Diseño y ejecución de un estudio de grado de acuerdo interobservador para definir etiquetas de entrenamiento.
+        \item Construcción y evaluación de un modelo de aprendizaje profundo para clasificación.
+        \item Diseño y ejecución de un estudio de nivel de acuerdo interobservador para definir etiquetas de entrenamiento.
         \item Documentación técnica y seguimiento de experimentos.
         \item Evaluación de productos externos.
     \end{rol}
 \end{experiencia}
-\tecnologiasItems{
-    \item \textbf{Python 3.13:} PyTorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn. \textbf{R 4.3:} tidyverse, ggplot2, plotly, irrCAC.
-    \item \textbf{Cloud:} AWS SageMaker y AWS S3.
-    \item \textbf{Control de versiones:} Git, Github y Bitbucket.
-    \item \textbf{Seguimiento de experimentos:} Weights \& Biases (wandb).
-}
+% \tecnologiasItems{
+%     \item \textbf{Python 3.13:} PyTorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn. \textbf{R 4.3:} tidyverse, ggplot2, plotly, irrCAC.
+%     \item \textbf{Cloud:} AWS SageMaker y AWS S3.
+%     \item \textbf{Control de versiones:} Git, Github y Bitbucket.
+%     \item \textbf{Seguimiento de experimentos:} Weights \& Biases (wandb).
+% }
+% \habilidades{Análisis y visualización de datos, aprendizaje automático, aprendizaje profundo, procesamiento de imágenes, estadística aplicada.}
+\tecnologias{\textbf{Python 3.13} (PyTorch, Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn, Pyplot); \textbf{AWS services} (AWS SageMaker, S3); \textbf{control de versiones} con Git, Github, Bitbucket; \textbf{seguimiento de experimentos} con Weights \& Biases (wandb); \textbf{R 4.3} (tidyverse, ggplot2, plotly, irrCAC).}\\
 \habilidades{Análisis y visualización de datos, aprendizaje automático, aprendizaje profundo, procesamiento de imágenes, estadística aplicada.}
 
-\vspace{1em}
-
+\vspace{5pt}
 \begin{experiencia}{FICEN-UF -- Departamento de Matemática}
     % \begin{rol}{Jefa de trabajos prácticos (JTP)}{Mar 2026 -- Presente}
     %     \item JTP en la materia \textbf{Cálculo III} (Cálculo en variable compleja).
@@ -53,26 +54,22 @@
     %     \item Desarrollo de materiales de estudio y guías de ejercicios.
     %     \item Escritura, evaluación y corrección de exámenes parciales.
     % \end{rol}
-    \begin{rol}{Ayudante Alumno}{Ago 2021 -- Mar 2026}
-        \item Ayudante en las materias \textbf{Cálculo I} (Cálculo en una variable), \textbf{Cálculo II} (Cálculo en varias variables) y \textbf{Cálculo III} (Cálculo en variable compleja).
-        \item Dictado de clases prácticas y de revisión teórica.
-        \item Colaboración en la escritura, evaluación y corrección de exámenes parciales bajo supervisión.
-    \end{rol}
+    \begin{rol_corto}{Ayudante Alumno}{Ago 2021 -- Mar 2026}
+        Ayudante en las materias \textbf{Cálculo I} (Cálculo en una variable), \textbf{Cálculo II} (Cálculo en varias variables) y \textbf{Cálculo III} (Cálculo en variable compleja).
+    \end{rol_corto}
 \end{experiencia}
 
+\vspace{5pt}
 \begin{experiencia}{FICEN-UF -- Departamento de Informática}
     \begin{rol}{Ayudante Alumno}{Mar 2025 -- Jul 2025}
         \item Ayudante en la materia \textbf{Base de Datos}.
-        \item Dictado de clases prácticas.
-        \item Escritura, evaluación y corrección de trabajos prácticos.
-        \item Colaboración en la escritura, evaluación y corrección de exámenes parciales bajo supervisión.
+        \item Colaboración en la escritura, evaluación y corrección de exámenes parciales y trabajos prácticos, bajo supervisión.
     \end{rol}
 \end{experiencia}
-\tecnologias{MySQL 8.0.}
+\tecnologias{MySQL 8.0.} \\
 \habilidades{Modelado y normalización de bases de datos, programación en SQL.}
 
-\vspace{1em}
-
+\vspace{5pt}
 \begin{experiencia}{Hospital Universitario Fundación Favaloro}
     \begin{rol}{Rotante en Ingeniería Biomédica}{May 2024 -- Sep 2024}
         \item Práctica profesional supervisada.
@@ -80,21 +77,28 @@
         \item Actualización de protocolos, conforme a la norma IRAM 15 y análisis de datos históricos de mantenimiento.
     \end{rol}
 \end{experiencia}
-\tecnologias{Microsoft Excel, Neovero.}
+\tecnologias{Microsoft Excel, Neovero.} \\
 \habilidades{Ingeniería Clínica.}
+
+% BECAS Y RECONOCIMIENTOS
+\section{Becas y Reconocimientos}
+\begin{itemize}[leftmargin=1.2em, label=\small\faAward, nosep]
+    \item \normalsize\textbf{Beca de Investigación para Estudiantes (BIE)}, UF \fecha{Feb 2022 -- Feb 2025}
+    \item \normalsize\textbf{Segunda escolta de bandera nacional}, FICEN-UF \fecha{Periodo lectivo 2024}
+\end{itemize}
+
+\pagebreak
 
 % CURSOS Y MINICURSOS
 \section{Cursos}
 \curso{Deep Learning: Redes neuronales desde cero}{Centro de e-Learning UTN FRBA. Con evaluación.}{37}{Jul 2023}
-
 \curso{Introducción al aprendizaje automático no supervisado}{FICEN-UF}{16}{May 2023}
-
 \curso{Machine Learning con Python}{Centro de e-Learning UTN FRBA. Con evaluación.}{60}{May 2023}
-
 \curso{Introducción a Python orientado a algoritmos y técnicas de programación competitiva}{IEEE UF, IEEE WIE y LambdaClass}{20}{Nov 2020}
 % \curso{Modelos Aditivos Generalizados (GAM)}{Reunión del Grupo Argentino de Bioestadística}{4}{Octubre de 2025}
 % \curso{Por qué (¿no?) me gustaría/quisiera/debería ``convertirme'' a la Estadística bayesiana y nunca me atreví a preguntármelo… }{Reunión del Grupo Argentino de Bioestadística}{3}{Octubre de 2025}
 % \curso{Ideas estocásticas fundamentales que conectan el análisis exploratorio y la inferencia informal}{Reunión del Grupo Argentino de Bioestadística}{3}{Octubre de 2025}
+
 % ASISTENCIA A CONGRESOS
 \section{Asistencia a Congresos y Jornadas}
 \evento{XX Jornadas de Informática en Salud JIS Summit del Hospital Italiano de Buenos Aires}{Centro Metropolitano de Diseño, Ciudad Autónoma de Buenos Aires, Argentina. Evento híbrido}{7 al 9 de noviembre de 2025}
@@ -106,7 +110,7 @@
 \evento{XXIV Congreso Argentino de Bioingeniería y las XIII Jornadas de Ingeniería Clínica, SABI 2023}{Universidad Nacional de Arturo Jauretche, Florencio Varela, y Centro Cultural Kirchner, Ciudad Autónoma de Buenos Aires, Argentina}{3 al 6 de octubre de 2023}
 \evento{XXIII Congreso Argentino de Bioingeniería y las XII Jornadas de Ingeniería Clínica, SABI 2022}{Universidad Nacional de San Juan, San Juan, Argentina}{13 al 16 de septiembre de 2022}
 
-\section{Presentación de Pósteres}
+\section{Presentaciones de Pósteres}
 \evento{\normalsize{Determinación de grado de acuerdo para variables categóricas: a propósito de un caso}}{GAB 2025}{Rusconi Lagarrigue A.B., Sguiglia S., \textbf{Guarnieri V.}, et al}
 \evento{\normalsize{Determinación del grado de acuerdo interobservador en segmentación de imágenes médicas: a propósito de un caso}}{GAB 2025}{Sguiglia S., Rusconi Lagarrigue A.B., \textbf{Guarnieri V.}, et al}
 
@@ -116,16 +120,7 @@
 
 % IDIOMAS Y SKILLS
 \section{Idioma}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Inglés} (Competencia básica, lectura técnica y escritura científica). \\
-\end{tabularx}
-
-% BECAS Y RECONOCIMIENTOS
-\section{Becas y Reconocimientos}
-\begin{itemize}[leftmargin=1.2em, label=\small\faAward, nosep]
-    \item \normalsize\textbf{Beca de Investigación para Estudiantes (BIE)}, UF \fecha{Feb 2022 -- Feb 2025}
-    \item \normalsize\textbf{Segunda escolta de bandera nacional}, FICEN-UF \fecha{Periodo lectivo 2024}
-\end{itemize}
+\textbf{Inglés} (Competencia básica, lectura técnica y escritura científica).
 
 % VOLUNTARIADO 
 \section{Voluntariado}

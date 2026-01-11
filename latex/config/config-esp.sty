@@ -1,0 +1,90 @@
+\ProvidesPackage{config/config-esp}
+
+% PAQUETES
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} % español
+\usepackage{url}
+\usepackage{parskip}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=1.25cm, bottom=1.25cm]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage[unicode, draft=false]{hyperref}
+\usepackage{parskip}
+\usepackage{setspace}
+\setstretch{1}
+\setlength{\parskip}{2pt}
+
+% CONFIGURACIÓN DE COLORES
+\definecolor{primaryColor}{RGB}{0, 32, 96} 
+\hypersetup{colorlinks, breaklinks, urlcolor=primaryColor, linkcolor=primaryColor}
+
+% ESTILO DE SECCIONES
+\titleformat{\section}{\Large\scshape\justifying\color{primaryColor}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+% COMANDOS PERSONALIZADOS
+\newcommand{\fecha}[1]{\hfill \small \textit{\color{black!70} #1}}
+
+% Entorno Experiencia
+\newenvironment{experiencia}[1]{
+    \par
+    \noindent\raggedright\normalsize\textbf{#1}\\ %\setlength{\parindent}{0pt}
+    \nopagebreak
+}{
+}
+
+\newenvironment{rol}[2]{
+    \noindent\raggedright{\small\textbf{\textit{#1}} \small\fecha{#2}}\\
+    \small
+    \begin{itemize}[nosep, leftmargin=2em, label=--, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
+}{
+    \end{itemize}
+}
+
+\newenvironment{rol_corto}[2]{%
+    \noindent\raggedright{\small\textbf{\textit{#1}} \small\fecha{#2}}\\
+    \noindent\small\justifying%\setlength{\parindent}{0pt}\justifying\ignorespaces
+}{
+}
+
+% Entorno Formación
+\newenvironment{formacion}[4]{
+    \noindent\raggedright{\normalsize\textbf{#1} \small\fecha{#4}}\\
+    \noindent\raggedright{{#2}, {#3}}
+    \small
+    \begin{itemize}[nosep, leftmargin=2em, label=--, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
+}{
+    \end{itemize}
+}
+
+% Comandos de Skills
+\newcommand{\tecnologias}[1]{%
+    \noindent \raggedright \footnotesize \textbf{\color{primaryColor}Herramientas principales:} #1 \normalsize \raggedright
+}
+
+\newcommand{\habilidades}[1]{%
+    \noindent \raggedright \footnotesize \textbf{\color{primaryColor}Aptitudes:} #1 \normalsize \raggedright
+}
+
+\newcommand{\tecnologiasItems}[1]{%
+    \noindent \raggedright \footnotesize \textbf{\color{primaryColor}Tecnologías y herramientas:}
+    \begin{itemize}[nosep, leftmargin=3em, label=\tiny\faCode, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
+        \footnotesize #1
+    \end{itemize}
+}
+
+% Eventos y Presentaciones
+\newcommand{\evento}[3]{%
+    \par
+    \noindent \justifying \textbf{#1}. \textit{#2}. {\small\itshape\color{black!70} #3}.%
+}
+
+\newcommand{\curso}[4]{%
+    \par
+    \noindent\raggedright{\small\textbf{#1} \small\fecha{#4}}\\
+    \noindent\raggedright{\textit{#2} (#3 hs).}
+}
