@@ -7,7 +7,7 @@
 \usepackage{url}
 \usepackage{parskip}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9, top=1.25cm, bottom=1.25cm]{geometry}
+\usepackage[scale=0.9, top=0.9cm, bottom=0.9cm, right=0.8cm, left=0.8cm]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -55,7 +55,7 @@
 % Entorno Formación
 \newenvironment{formacion}[4]{
     \noindent\raggedright{\normalsize\textbf{#1} \small\fecha{#4}}\\
-    \noindent\raggedright{{#2}, {#3}}
+    \noindent\raggedright{\small\textbf{\textit{#2, #3}}}
     \small
     \begin{itemize}[nosep, leftmargin=2em, label=--, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
 }{
@@ -64,17 +64,17 @@
 
 % Comandos de Skills
 \newcommand{\tecnologias}[1]{%
-    \noindent \raggedright \footnotesize \textbf{\color{primaryColor}Herramientas principales:} #1 \normalsize \raggedright
+    \noindent \raggedright \small \textbf{\color{primaryColor}Herramientas principales:} #1 \normalsize \raggedright
 }
 
 \newcommand{\habilidades}[1]{%
-    \noindent \raggedright \footnotesize \textbf{\color{primaryColor}Aptitudes:} #1 \normalsize \raggedright
+    \noindent \raggedright \small \textbf{\color{primaryColor}Aptitudes:} #1 \normalsize \raggedright
 }
 
 \newcommand{\tecnologiasItems}[1]{%
-    \noindent \raggedright \footnotesize \textbf{\color{primaryColor}Tecnologías y herramientas:}
+    \noindent \raggedright \small \textbf{\color{primaryColor}Tecnologías y herramientas:}
     \begin{itemize}[nosep, leftmargin=3em, label=\tiny\faCode, itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt]
-        \footnotesize #1
+        \small #1
     \end{itemize}
 }
 
