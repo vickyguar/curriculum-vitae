@@ -6,4 +6,4 @@
 
 ## Profesionales (resumidos)
 - [Español](latex/build/cv-profesional-esp.pdf)
-- [English](latex/build/cv-profesional-eng.pdf)
+- [English](latex/build/cv-professional-eng.pdf)
